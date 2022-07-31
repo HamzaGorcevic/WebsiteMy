@@ -1,0 +1,378 @@
+html{
+    scroll-behavior: smooth;
+}
+.input-group{
+    width: 50%;
+}
+.contact{
+    border-radius: 40px;
+    animation: cIn 0.7s;
+    animation-fill-mode: forwards;
+    border-bottom-right-radius: 20px;
+    animation-delay: 0.3s;
+    
+}
+
+.contact:hover{
+    animation: cOut 0.7s;
+}
+@keyframes cIn{
+    from{border-top-right-radius: 40px;}
+    to{border-top-right-radius: 500px;}
+}
+@keyframes cOut{
+    from{border-top-right-radius: 500px;}
+    to{border-top-right-radius: 40px;}
+}
+.img{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    border-radius: 40px;
+    width: 10%;
+    transition: all;
+    -webkit-transition: all 700ms ease-out;
+    white-space: nowrap;
+}
+.input,.inputMsg{
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+}
+.inputMsg{
+    height: 200px;
+    font-size: large;
+    resize: none;
+}
+
+
+.input::placeholder{
+    font-size: large;
+    padding: 2px;
+}
+.inputMsg::placeholder{
+    font-size: larger;
+    
+    
+}
+.inputMsg:focus{
+    outline: auto orange;
+}
+.input:focus{
+    outline: auto orange;
+}
+
+.img h3{
+    opacity: 0;
+    
+}
+.img.active{
+    flex: 4;
+}
+.img.active h3{
+    opacity: 1;
+    
+}
+h3{
+    color: white;
+    position: relative;
+    top: 80%;
+    margin: 10px;
+}
+.iconDiv:hover .ikon{
+    animation: out 1s;
+    animation-fill-mode: forwards;
+    
+}
+.ikon{
+    animation-name: in;
+    animation-duration: 1s;
+    
+    
+}
+.activated{
+    animation: out 1s;
+    
+    
+}
+@keyframes in{
+    0%{transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}
+    
+}
+@keyframes out{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+
+}
+.aboutMain{
+    background: -webkit-linear-gradient(rgba(11, 92, 255, 0.336), rgba(6, 6, 184, 0.336)), url("https://wallpaperaccess.com/full/1590.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+}
+.imgBg{
+    height: 100%;
+}
+.inputRegDate::-webkit-calendar-picker-indicator {
+    color-scheme: dark;
+}
+.inputReg{
+    color: rgb(85, 85, 85);
+    font-size: medium;
+    font-weight: 600;
+    padding-left: 10px;
+    height: 50px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+    letter-spacing: 1px;
+}
+.inputReg:focus{
+    
+    outline: auto blue;
+}
+.inputReg::placeholder{
+    letter-spacing: 0px;
+    font-weight: 400;
+    outline: auto;
+    padding-left: 3px;
+    outline: blue;
+    color: rgb(109, 148, 151);
+}
+.registerBtn{
+    width: 250px;
+}
+
+.signUpContent{
+    z-index: 10;
+    margin-bottom: 20px;
+    animation: hoverSignOut 1s;
+}
+.signUp{
+    position: relative
+}
+.signUp::before{
+    content: '';
+    top: 0; right: 0; bottom: 10px; left: 0;
+    background: rgba(55, 121, 221, 0.89);
+    border-radius: 10px;
+    display: inline-block;
+    position: absolute;
+    
+    transform: scaleX(0);
+    transform-origin:  left;
+    transition: transform 0.3s;
+    
+}
+.signUp:hover::before{
+    z-index: 1;
+    animation-fill-mode: forwards;
+    transform: scaleX(1);
+    transform-origin:  right;
+}
+.signUp:hover{
+    
+    font-weight: 100;
+    transition: 1s;
+}
+
+.terms{
+    cursor: pointer;
+    color: rgb(68, 226, 226);
+    list-style: none;
+    text-decoration: none;
+
+    
+}
+
+
+
+.loginMain{
+    background: -webkit-linear-gradient(rgba(11, 92, 255, 0.336), rgba(6, 6, 184, 0.336)), url("https://wallpaperaccess.com/full/1590.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+}
+.login{
+    z-index: 10;
+    position: relative;
+    
+}
+.login::before{
+    display: block;
+    position: absolute;
+    content: ' ';
+    border-radius: 10px;
+    top: 10px;bottom: -10px;right: 0;left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: rgba(0, 195, 255, 0.548);
+    z-index: -1;
+    transition: transform 0.3s;
+}
+.login:hover::before{
+    transform: scaleX(1);
+    transform-origin: right;
+    
+}
+.inputLog{
+    width: 350px;
+    height: 100px;
+}
+
+@media (max-width: 576px) {
+    .input-group {
+        width: 100%;
+    };
+    
+    
+}
+#someRandomInfo{
+    z-index: 10;
+    width: 50%;
+}
+@media (max-width:576px){
+    .input,.inputMsg{
+        width: 200px;
+        height: 40px;
+    }
+    .input::placeholder{
+        font-size: medium;
+    }
+    .inputMsg{
+        height: 100px;
+    }
+    .contact{
+        animation: none;
+    }
+    .contact:hover{
+        animation: none;
+    }
+    .img{
+        width: 15%;
+    }
+    #someRandomInfo{
+        width: 95%;
+    }
+}
+.hacker:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.hackerDiv{
+    position: relative;
+}
+.hackerDiv::after{
+    content: 'HeLlo';
+    color: white;
+    position: absolute;
+    display: block;
+    font-size: 40px;
+    visibility: hidden;
+    width: 0px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+    font-weight: 600;
+
+}
+
+.hackerDiv:hover::after{
+    visibility: visible;
+    width: 30%;
+    transition: all 1s;
+
+}
+.AboutMeText{
+    padding: 1rem;
+    width: 40%;
+    box-shadow: 2px 2px 5px rgba(31, 29, 27, 0.637);
+    position: relative;
+}
+.showMore{
+    color: rgb(58, 79, 173);
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+    transition: all 1s;
+}
+.light{
+    background: white;
+    color: black;
+    transition: all 1s;
+}
+.divBtns{
+    position: absolute;
+    left: -2%;
+    bottom: 5%;
+
+}
+
+.goHome{
+
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.267);
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.5s;
+
+}
+.linkForHome{
+    background: linear-gradient(rgba(39, 241, 255, 0.616),rgba(85, 55, 255, 0.021));
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.5s;
+}
+.linkForHome:hover{
+    background-color: rgba(0, 247, 255, 0.753);
+}
+.linkForHome:hover .goHome{
+    color: rgba(255, 255, 255, 0.726);
+}
+
+/* section title animation */
+.forAnimation{
+    position: relative;
+    padding: 7px;
+    cursor: default;
+    z-index: 2;
+}
+.forAnimation::after{
+    
+    content: '';
+    top: 0;right: 0;bottom: 0;left: 0;
+    background-color: rgb(74, 189, 255);
+    position: absolute;
+    display: inline;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin:  left;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+.forAnimation:hover::after{
+    transform: scaleX(1);
+}
+.orange{
+    color: rgb(255, 190, 71);
+}
